@@ -3,7 +3,7 @@
 
 In the Program.cs file,
 ```CSharp
-builder.Services.AddFmgLibLocalization();
+builder.Services.AddFmgLibLocalizationMaui();
 ```
 should be added.
 
