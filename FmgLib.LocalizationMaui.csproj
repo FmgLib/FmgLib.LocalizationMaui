@@ -7,19 +7,29 @@
 		<GeneratePackageOnBuild>True</GeneratePackageOnBuild>
 		<Title>FmgLib.LocalizationMaui</Title>
 		<Company>Fmg Yazılım</Company>
-		<PackageIcon>FMGYAZILIM_LOGO.png</PackageIcon>
+		<PackageIcon>nuget.png</PackageIcon>
 		<PackageReadmeFile>README.md</PackageReadmeFile>
 		<Authors>FmgYazılım</Authors>
 		<Description>This package serves to integrate your MAUI application into multiple languages.</Description>
-		<Copyright>Copyright 2023</Copyright>
-		<PackageTags>Localization</PackageTags>
+		<Copyright>Copyright 2024</Copyright>
+		<PackageTags>Localization, fmglib, fmg, multilang, lang</PackageTags>
 		<Version>1.0.0</Version>
+		<PackageProjectUrl>https://github.com/FmgLib/FmgLib.LocalizationMaui</PackageProjectUrl>
+		<RepositoryUrl>https://github.com/FmgLib/FmgLib.LocalizationMaui</RepositoryUrl>
 	</PropertyGroup>
 
 	<ItemGroup>
 		<PackageReference Include="Microsoft.Maui.Controls" Version="8.*" />
 		<PackageReference Include="Newtonsoft.json" Version="13.0.3" />
-		<PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="8.*" />
+		<PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="8.0.0" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<None Include="README.md" Pack="true" PackagePath=""/>
+	</ItemGroup>
+
+	<ItemGroup>
+		<None Include="nuget.png" Pack="true" PackagePath=""/>
 	</ItemGroup>
 
 </Project>
