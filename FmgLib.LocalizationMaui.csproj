@@ -1,0 +1,25 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFrameworks>net8.0</TargetFrameworks>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>enable</Nullable>
+		<GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+		<Title>FmgLib.LocalizationMaui</Title>
+		<Company>Fmg Yazılım</Company>
+		<PackageIcon>FMGYAZILIM_LOGO.png</PackageIcon>
+		<PackageReadmeFile>README.md</PackageReadmeFile>
+		<Authors>FmgYazılım</Authors>
+		<Description>This package serves to integrate your MAUI application into multiple languages.</Description>
+		<Copyright>Copyright 2023</Copyright>
+		<PackageTags>Localization</PackageTags>
+		<Version>1.0.0</Version>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Microsoft.Maui.Controls" Version="8.*" />
+		<PackageReference Include="Newtonsoft.json" Version="13.0.3" />
+		<PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="8.*" />
+	</ItemGroup>
+
+</Project>
