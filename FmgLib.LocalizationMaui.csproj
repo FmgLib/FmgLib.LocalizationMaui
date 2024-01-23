@@ -13,7 +13,7 @@
 		<Description>This package serves to integrate your MAUI application into multiple languages.</Description>
 		<Copyright>Copyright 2024</Copyright>
 		<PackageTags>Localization, fmglib, fmg, multilang, lang</PackageTags>
-		<Version>1.0.0</Version>
+		<Version>1.0.1-prev</Version>
 		<PackageProjectUrl>https://github.com/FmgLib/FmgLib.LocalizationMaui</PackageProjectUrl>
 		<RepositoryUrl>https://github.com/FmgLib/FmgLib.LocalizationMaui</RepositoryUrl>
 	</PropertyGroup>

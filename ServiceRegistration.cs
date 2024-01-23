@@ -4,27 +4,31 @@ namespace FmgLib.LocalizationMaui;
 
 public static class ServiceRegistration
 {
-    public static IServiceCollection AddFmgLibLocalizationMaui(this IServiceCollection services, params string[] filePathes)
+    public static IServiceCollection AddFmgLibLocalizationMaui(this IServiceCollection services, string defaultLang = "", params string[] filePathes)
     {
+        LocalizationService.Language = defaultLang;
         LocalizationService.ReadLocalizationFile(filePathes);
 
         return services;
     }
 
-    public static void AddFmgLibLocalizationMaui(params string[] filePathes)
+    public static void AddFmgLibLocalizationMaui(string defaultLang = "", params string[] filePathes)
     {
+        LocalizationService.Language = defaultLang;
         LocalizationService.ReadLocalizationFile(filePathes);
     }
 
-    public static async Task<IServiceCollection> AddFmgLibLocalizationMauiAsync(this IServiceCollection services, params string[] filePathes)
+    public static async Task<IServiceCollection> AddFmgLibLocalizationMauiAsync(this IServiceCollection services, string defaultLang = "", params string[] filePathes)
     {
+        LocalizationService.Language = defaultLang;
         await LocalizationService.ReadLocalizationFile(filePathes);
 
         return services;
     }
 
-    public static async Task AddFmgLibLocalizationMauiAsync(params string[] filePathes)
+    public static async Task AddFmgLibLocalizationMauiAsync(string defaultLang = "", params string[] filePathes)
     {
+        LocalizationService.Language = defaultLang;
         await LocalizationService.ReadLocalizationFile(filePathes);
     }
 }

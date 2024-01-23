@@ -1,9 +1,9 @@
-﻿To access related services, simply add `using FmgLib.Localization;` statement.
+﻿To access related services, simply add `using FmgLib.LocalizationMaui;` statement.
 
 
 In the Program.cs file,
 ```CSharp
-builder.Services.AddFmgLibLocalization();
+builder.Services.AddFmgLibLocalizationMaui();
 ```
 should be added.
 
@@ -12,6 +12,8 @@ In your main project you should have a language file of type json. The translati
 If you do not specify the path to the file(s) in the parameter ( 
 ```CSharp
 builder.Services.AddFmgLibLocalizationMaui();
+builder.Services.AddFmgLibLocalizationMaui(defaultLang:"en-US");
+builder.Services.AddFmgLibLocalizationMaui(defaultLang:"en-US", "Loc1.json", "Loc2.json");
 ```
 ), will look for a json file named `Localization.json` in the home directory.
 
