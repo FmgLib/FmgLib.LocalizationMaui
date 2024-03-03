@@ -3,24 +3,49 @@
 
 In the Program.cs file,
 ```CSharp
+builder
+    .UseMauiApp<App>()
+    .UseFmgLibLocalizationMaui();
+```
+OR
+```CSharp
 builder.Services.AddFmgLibLocalizationMaui();
 ```
+
+
 should be added.
 
 
 In your main project you should have a language file of type json. The translation will be read from this file and imported.
 If you do not specify the path to the file(s) in the parameter ( 
 ```CSharp
+builder
+    .UseMauiApp<App>()
+    .UseFmgLibLocalizationMaui();
+  //.UseFmgLibLocalizationMaui(defaultLang:"en-US"); // or
+  //.UseFmgLibLocalizationMaui(defaultLang:"en-US", "Loc1.json", "Loc2.json"); // or
+```
+OR
+```CSharp
 builder.Services.AddFmgLibLocalizationMaui();
-builder.Services.AddFmgLibLocalizationMaui(defaultLang:"en-US");
-builder.Services.AddFmgLibLocalizationMaui(defaultLang:"en-US", "Loc1.json", "Loc2.json");
+// builder.Services.AddFmgLibLocalizationMaui(defaultLang:"en-US"); // or
+builder.Services.AddFmgLibLocalizationMaui(defaultLang:"en-US", "Loc1.json", "Loc2.json"); // or
 ```
 ), will look for a json file named `Localization.json` in the home directory.
 
-if you give one or more parameters like 
+if you give one or more parameters like
+```CSharp
+builder
+    .UseMauiApp<App>()
+    .UseFmgLibLocalizationMaui("Localization1.json", "Localization2.json", "/Languages/Temp1.json");
+```
+OR
+
 ```CSharp
 builder.Services.AddFmgLibLocalizationMaui("Localization1.json", "Localization2.json", "/Languages/Temp1.json");
 ```
+
+
 it will read json files in given file paths.
 
 **The critical point here is to select ```Build Action: MauiAsset``` for json files.**
