@@ -1,9 +1,10 @@
-name: "Deploy to FmgLib Nuget"
+name: Deploy to FmgLib Nuget
 
 on:
+  workflow_dispatch:
   push:
-    tags:
-    - 'v*'
+    branches:
+    - master
 
 env:
   PROJECT_PATH: 'FmgLib.LocalizationMaui.csproj'
@@ -11,17 +12,19 @@ env:
   NUGET_SOURCE_URL: 'https://api.nuget.org/v3/index.json'
 
 jobs:
-  deploy:
-    name: 'Deploy'
-    runs-on: 'windows-latest'
+  release:
+    name: Release
+    runs-on: windows-latest
+    permissions:
+      contents: write
     steps:
-    - name: 'Checkout'
-      uses: actions/checkout@v2
+    - name: Checkout
+      uses: actions/checkout@v3
 
-    - name: 'Install dotnet'
-      uses: actions/setup-dotnet@v1
+    - name: Install dotnet
+      uses: actions/setup-dotnet@v3
       with:
-        dotnet-version: '8.x'
+        dotnet-version: 8.0.x
 
     - name: 'Restore package'
       run: dotnet restore ${{ env.PROJECT_PATH }}
