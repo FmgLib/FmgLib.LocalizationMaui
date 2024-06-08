@@ -7,15 +7,16 @@
 		<GeneratePackageOnBuild>True</GeneratePackageOnBuild>
 		<Title>FmgLib.LocalizationMaui</Title>
 		<Company>Fmg Yazılım</Company>
-		<PackageIcon>nuget.png</PackageIcon>
-		<PackageReadmeFile>README.md</PackageReadmeFile>
 		<Authors>FmgYazılım</Authors>
 		<Description>This package serves to integrate your MAUI application into multiple languages.</Description>
 		<Copyright>Copyright 2024</Copyright>
 		<PackageTags>Localization, fmglib, fmg, multilang, lang, maui, dotnetmaui, dotnet</PackageTags>
-		<Version>1.0.1</Version>
+		<!--<Version>1.0.1</Version>-->
 		<PackageProjectUrl>https://github.com/FmgLib/FmgLib.LocalizationMaui</PackageProjectUrl>
 		<RepositoryUrl>https://github.com/FmgLib/FmgLib.LocalizationMaui</RepositoryUrl>
+		<PackageIcon>nuget.png</PackageIcon>
+		<PackageReadmeFile>README.md</PackageReadmeFile>
+		<PackageLicenseFile>LICENSE</PackageLicenseFile>
 	</PropertyGroup>
 
 	<ItemGroup>
@@ -24,11 +25,9 @@
 	</ItemGroup>
 
 	<ItemGroup>
-		<None Include="README.md" Pack="true" PackagePath="" />
-	</ItemGroup>
-
-	<ItemGroup>
+		<None Include="LICENSE" Pack="true" PackagePath="" />
 		<None Include="nuget.png" Pack="true" PackagePath="" />
+		<None Include="README.md" Pack="true" PackagePath="" />
 	</ItemGroup>
 
 </Project>
